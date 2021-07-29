@@ -16,7 +16,7 @@ const Shipment = () => {
     const savedCart = getDatabaseCart();
     const orderDetails = { ...logedInUser, products: savedCart, shipment: data, orderTime: new Date() };
 
-    fetch('http://localhost:5000/addOrder', {
+    fetch('https://enigmatic-garden-61574.herokuapp.com/addOrder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
